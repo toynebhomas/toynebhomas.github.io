@@ -1,224 +1,66 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thomas Boyne — Photography Portfolio</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13px; line-height: 1.4; color: #111; background-color: #fff; display: flex; }
+    nav { width: 240px; height: 100vh; position: fixed; top: 0; left: 0; padding: 30px 20px; background: #fff; border-right: 1px solid #eaeaea; overflow-y: auto; }
+    nav h1 { font-size: 13px; font-weight: 500; margin-bottom: 25px; }
+    nav h1 a { color: #111; text-decoration: none; }
+    .nav-section { margin-bottom: 25px; }
+    .nav-section ul { list-style: none; }
+    .nav-section ul li { margin-bottom: 4px; }
+    .nav-section ul li a { color: #555; text-decoration: none; transition: color 0.2s ease; }
+    .nav-section ul li a:hover { color: #111; }
+    main { margin-left: 240px; padding: 40px; width: calc(100% - 240px); max-width: 1200px; }
+    .category-section { margin-bottom: 60px; }
+    .category-title { font-size: 13px; font-weight: 500; margin-bottom: 15px; color: #111; text-transform: lowercase; }
+    .photo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .photo-grid img { width: 100%; height: auto; display: block; object-fit: cover; background-color: #f4f4f4; }
+    .photo-grid img.featured-photo { grid-column: 1 / -1; max-height: 80vh; }
+    @media (max-width: 768px) {
+      body { flex-direction: column; }
+      nav { position: relative; width: 100%; height: auto; border-right: none; border-bottom: 1px solid #eaeaea; padding: 20px; }
+      main { margin-left: 0; width: 100%; padding: 20px; }
+      .photo-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Thomas Boyne — Photography Portfolio&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Reset &amp; Base Styles */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>* {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-sizing: border-box;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.4;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #111111;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Left Sidebar Navigation */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>nav {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 240px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height: 100vh;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: fixed;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>left: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 30px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-right: 1px solid #eaeaea;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>overflow-y: auto;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>nav h1 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 500;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 25px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>nav h1 a {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #111;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-section {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 25px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-section ul {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>list-style: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-section ul li {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 4px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-section ul li a {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #555555;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: color 0.2s ease;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-section ul li a:hover,</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-section ul li a.active {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #111111;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Main Content Area */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>main {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-left: 240px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: calc(100% - 240px);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 1200px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.category-section {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 60px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.category-title {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 500;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #111;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-transform: lowercase;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Photo Grid Layout */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.photo-grid {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(2, 1fr);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.photo-grid img {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height: auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>object-fit: cover;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #f4f4f4;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Feature/Header Photo: Spans full width across both columns */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.photo-grid img.featured-photo {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>grid-column: 1 / -1;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-height: 80vh;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Mobile Responsiveness */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 768px) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p2"><span class="Apple-converted-space">      </span></p>
-<p class="p1"><span class="Apple-converted-space">      </span>nav {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>height: auto;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>border-right: none;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>border-bottom: 1px solid #eaeaea;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>main {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>margin-left: 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>.photo-grid {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: 1fr;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Left Sidebar Navigation --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;nav&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;&lt;a href="#"&gt;Thomas Boyne&lt;/a&gt;&lt;/h1&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;a href="#in-the-city"&gt;in the city&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;a href="#above-the-clouds"&gt;above the clouds&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;a href="#out-of-the-city"&gt;out of the city&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;a href="#way-out-of-the-city"&gt;way out of the city&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;a href="#guatemala"&gt;guatemala&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;a href="#utah"&gt;utah&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;a href="#washington"&gt;washington&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;a href="#california"&gt;california&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;a href="#information"&gt;Information&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;a href="https://instagram.com" target="_blank"&gt;Instagram&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/nav&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Main Content Grid --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;main&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Category: In The City --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="in-the-city" class="category-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="category-title"&gt;in the city&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="photo-grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Favorite Header Photo (Spans across both columns) --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="https://res.cloudinary.com/your-cloud-name/image/upload/v1/city-header.jpg" alt="In the city favorite" class="featured-photo" loading="lazy"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Regular Grid Photos --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="https://res.cloudinary.com/your-cloud-name/image/upload/v1/city-1.jpg" alt="In the city photo 1" loading="lazy"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="https://res.cloudinary.com/your-cloud-name/image/upload/v1/city-2.jpg" alt="In the city photo 2" loading="lazy"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Category: Above The Clouds --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="above-the-clouds" class="category-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="category-title"&gt;above the clouds&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="photo-grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="https://res.cloudinary.com/your-cloud-name/image/upload/v1/clouds-header.jpg" alt="Above the clouds favorite" class="featured-photo" loading="lazy"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="https://res.cloudinary.com/your-cloud-name/image/upload/v1/clouds-1.jpg" alt="Above the clouds photo 1" loading="lazy"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Category: Guatemala --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="guatemala" class="category-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="category-title"&gt;guatemala&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="photo-grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="https://res.cloudinary.com/your-cloud-name/image/upload/v1/guatemala-header.jpg" alt="Guatemala favorite" class="featured-photo" loading="lazy"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="https://res.cloudinary.com/your-cloud-name/image/upload/v1/guatemala-1.jpg" alt="Guatemala photo 1" loading="lazy"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Information Section --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="information" class="category-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="category-title"&gt;Information&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Add your bio, camera equipment, or contact details here.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <nav>
+    <h1><a href="#">Thomas Boyne</a></h1>
+    <div class="nav-section">
+      <ul>
+        <li><a href="#in-the-city">in the city</a></li>
+        <li><a href="#above-the-clouds">above the clouds</a></li>
+        <li><a href="#out-of-the-city">out of the city</a></li>
+        <li><a href="#way-out-of-the-city">way out of the city</a></li>
+        <li><a href="#guatemala">guatemala</a></li>
+        <li><a href="#utah">utah</a></li>
+        <li><a href="#washington">washington</a></li>
+        <li><a href="#california">california</a></li>
+      </ul>
+    </div>
+    <div class="nav-section">
+      <ul>
+        <li><a href="#information">Information</a></li>
+        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section id="in-the-city" class="category-section">
+      <h2 class="category-title">in the city</h2>
+      <div class="photo-grid">
+        <img src="https://picsum.photos/1200/800" alt="Sample" class="featured-photo" loading="lazy">
+        <img src="https://picsum.photos/600/400" alt="Sample" loading="lazy">
+        <img src="https://picsum.photos/600/401" alt="Sample" loading="lazy">
+      </div>
+    </section>
+  </main>
 </body>
 </html>
