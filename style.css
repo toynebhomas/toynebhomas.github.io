@@ -1,0 +1,130 @@
+/* ------------------------------------------------------------------
+   Shared look for the editor AND the public site.
+   Plain, early-web feel. (The editor's pink is NOT in this file.)
+------------------------------------------------------------------- */
+:root {
+  --ink: #111;
+  --muted: #777;
+  --line: #ddd;
+  --paper: #fff;
+  --gap: 14px;           /* space between photos */
+  --mat: 6px;            /* thin whitespace around each photo inside its cell */
+  --sidebar: 210px;
+  /* The site font. Chosen in the editor's Settings; these are just the defaults. */
+  --font: "Courier New", Courier, monospace;
+  --font-size: 14px;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; background: var(--paper); color: var(--ink); }
+
+body {
+  font: var(--font-size)/1.5 var(--font);
+}
+
+a { color: var(--ink); }
+
+/* ---------- layout: sidebar + main ---------- */
+.layout { display: flex; align-items: flex-start; }
+
+.sidebar {
+  position: sticky; top: 0;
+  width: var(--sidebar); flex: none;
+  min-height: 100vh; max-height: 100vh;
+  padding: 28px 18px 24px 24px;
+  display: flex; flex-direction: column;
+}
+.site-name { font-size: var(--font-size); font-weight: bold; margin: 0 0 22px; }
+.site-name a { text-decoration: none; }
+
+.collections { list-style: none; margin: 0; padding: 0; flex: 1; overflow-y: auto; }
+.collections li { margin: 0 0 4px; }
+.collections a { text-decoration: none; }
+.collections a:hover { text-decoration: underline; }
+.collections .current > a { text-decoration: underline; }
+
+.sidebar-foot { list-style: none; margin: 24px 0 0; padding: 0; }
+.sidebar-foot li { margin: 0 0 4px; }
+.sidebar-foot a { color: var(--muted); text-decoration: none; }
+.sidebar-foot a:hover { color: var(--ink); text-decoration: underline; }
+
+.menu-button { display: none; }
+
+.main { flex: 1; min-width: 0; padding: 28px 32px 80px 12px; max-width: 1240px; }
+
+/* ---------- the photo book grid ----------
+   2 columns of 3:2 horizontal cells. Row height is worked out from the width,
+   so a vertical (2 rows tall) or Large (2x2) always lines up exactly. */
+.grid-wrap { container-type: inline-size; }
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  --rowh: calc((100cqw - var(--gap)) / 3);
+  grid-auto-rows: var(--rowh);
+  gap: var(--gap);
+}
+
+.cell { position: relative; padding: var(--mat); min-width: 0; min-height: 0; }
+.cell img {
+  display: block; width: 100%; height: 100%;
+  object-fit: contain;            /* fits any scan size; verticals get side gutters */
+}
+.cell.blank { visibility: hidden; } /* empty space on the public site */
+.cell button.open { all: unset; display: block; width: 100%; height: 100%; cursor: zoom-in; }
+
+.caption { color: var(--muted); }
+
+/* ---------- information page ---------- */
+.info-page { max-width: 34em; white-space: pre-wrap; }
+
+/* ---------- enlarged view (lightbox) ---------- */
+.lightbox {
+  position: fixed; inset: 0; z-index: 50;
+  background: rgba(255, 255, 255, 0.98);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 40px 70px 24px;
+}
+.lightbox[hidden] { display: none; }
+.lightbox img { max-width: 100%; max-height: calc(100vh - 130px); object-fit: contain; }
+.lightbox .lb-text { margin-top: 12px; text-align: center; min-height: 3em; }
+.lightbox .lb-film { color: var(--muted); }
+.lightbox button {
+  position: absolute; background: none; border: 0; cursor: pointer;
+  font: 28px/1 var(--font); color: var(--ink); padding: 12px;
+}
+.lightbox .lb-close { top: 14px; right: 18px; }
+.lightbox .lb-prev { left: 10px; top: 50%; transform: translateY(-50%); }
+.lightbox .lb-next { right: 10px; top: 50%; transform: translateY(-50%); }
+.lightbox button:hover { color: var(--muted); }
+
+/* ---------- phone layout (public site + pre-publish test) ---------- */
+@media (max-width: 700px) {
+  .public .layout { display: block; }
+  .public .sidebar {
+    position: static; width: auto; min-height: 0; max-height: none;
+    padding: 16px 16px 8px; flex-direction: row; flex-wrap: wrap; align-items: baseline;
+  }
+  .public .site-name { margin: 0; flex: 1; }
+  .public .menu-button {
+    display: block; background: none; border: 0; padding: 0; cursor: pointer;
+    font: inherit; text-decoration: underline;
+  }
+  .public .collections, .public .sidebar-foot { display: none; width: 100%; flex: none; }
+  .public .sidebar.open .collections, .public .sidebar.open .sidebar-foot { display: block; }
+  .public .collections { margin-top: 12px; }
+  .public .sidebar-foot { margin-top: 12px; }
+  .public .main { padding: 8px 16px 60px; }
+
+  /* single column, natural proportions, reading order */
+  .public .grid { display: flex; flex-direction: column; gap: var(--gap); }
+  .public .cell { padding: 0; }
+  .public .cell img { height: auto; }
+  .public .cell.blank { display: none; }
+  .public .lightbox { padding: 50px 8px 16px; }
+  .public .lightbox .lb-prev, .public .lightbox .lb-next { top: auto; bottom: 8px; transform: none; }
+}
+
+/* Font chosen in the editor: Inter */
+:root { --font: Inter, Helvetica, Arial, sans-serif; --font-size: 13px; }
